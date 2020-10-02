@@ -1,0 +1,135 @@
+/*
+**
+** outline
+** header
+** gnav
+** footer
+** pagetop
+** main common
+** top
+** about
+**
+*/
+/*==================================================
+
+** outline
+==================================================*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  left: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.wrap {
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/*==================================================
+
+** header
+==================================================*/
+.header {
+  width: 100%;
+  height: 64px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.header .header-top {
+  background-color: #009acd;
+  height: 64px;
+}
+
+.header .header-top__text {
+  display: none;
+}
+
+/*==================================================
+
+** gnav
+==================================================*/
+/*==================================================
+
+** footer
+==================================================*/
+/*==================================================
+
+** pagetop
+==================================================*/
+/*==================================================
+
+** main common
+==================================================*/
+.main {
+  margin-top: 64px;
+  padding-top: 5rem;
+}
+
+.main p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+}
+
+.main p + p {
+  margin-top: 1em;
+}
+
+.main .text-l {
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.main .text-s {
+  font-size: 1.4rem;
+  color: #999999;
+  line-height: 1.6;
+}
+
+.main ul {
+  margin-top: 3.2rem;
+}
+
+.main ul li {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  padding-left: 1em;
+  position: relative;
+}
+
+.main ul li::before {
+  content: '\f105';
+  font-family: 'FontAwesome';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main ul li + li {
+  margin-top: 0.625em;
+}
+
+.main h2,
+.main h3,
+.main h4,
+.main h5,
+.main h6 {
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  font-weight: 600;
+}
+/*# sourceMappingURL=style.css.map */

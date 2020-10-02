@@ -1,0 +1,93 @@
+//////////////////////////////////////////////////
+// Settings
+//
+
+// fonts
+$font-jp: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo,
+  "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-en: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// color-pallet
+$color-black: #333333;
+$color-white: #ffffff;
+$color-lightblue: #009acd;
+$color-gray: #999999;
+$color-lightgray: #cccccc;
+$color-gnav: #202020;
+
+// color
+$color-main: $color-lightblue;
+$color-txt: $color-black;
+$color-btn: $color-lightblue;
+$color-btn-hover: #00ace5;
+$color-textlink: #555555;
+$color-border: $color-lightgray;
+
+// sns
+$color-facebook: #3b5998;
+$color-twitter: #55acee;
+$color-google: #dd4b39;
+$color-line: #00b900;
+
+//header-height
+$header-height-sp: 64px;
+//footer-height
+$footer-height-sp: 72px;
+
+//width
+$gnav-width-sp: 240px;
+
+//text-overflow
+@mixin text-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+// breakpoints
+$breakpoints: (
+  "xxs": "375px",
+  "xs": "576px",
+  "sm": "768px",
+  "md": "1024px",
+  "lg": "1280px",
+  "xl": "1920px",
+) !default;
+
+@mixin media($type, $bp1, $bp2: 0) {
+  @if ($type == min) {
+    @media screen and (min-width: #{map-get($breakpoints, $bp1)}) {
+      @content;
+    }
+  } @else if ($type == max) {
+    @media screen and (max-width: #{map-get($breakpoints, $bp1)}) {
+      @content;
+    }
+  } @else if ($type == between) {
+    @media screen and (min-width: #{map-get($breakpoints, $bp1)}) and (max-width: #{map-get($breakpoints, $bp2)}) {
+      @content;
+    }
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media screen and (-ms-high-contrast: active),
+    screen and (-ms-high-contrast: none) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}
