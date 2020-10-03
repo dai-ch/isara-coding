@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 **
 ** outline
@@ -23,6 +24,12 @@
 
 body {
   min-height: 100vh;
+  min-height: -webkit-fill-available;
+  color: #000000;
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* 基本のfont-familyを指定する */
+  font-weight: 300;
+  /* 基本のfont-weightを指定する */
   position: relative;
   left: 0;
 }
@@ -34,7 +41,7 @@ img {
 
 .wrap {
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 /*==================================================
@@ -43,19 +50,140 @@ img {
 ==================================================*/
 .header {
   width: 100%;
-  height: 64px;
+  height: 84px;
   position: fixed;
   top: 0;
   z-index: 1;
 }
 
-.header .header-top {
-  background-color: #009acd;
-  height: 64px;
+.header .header-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  position: relative;
 }
 
-.header .header-top__text {
+.header .header-inner__left {
+  padding-left: 1rem;
+  margin-top: 1.5rem;
+  letter-spacing: 0;
+}
+
+.header .header-inner__txt {
+  font-size: 10px;
+  font-weight: normal;
+}
+
+.header .header-inner__logo {
+  width: 9rem;
+  margin-top: 1rem;
+}
+
+.header .header-inner__right {
+  width: 6.5rem;
+  height: 100%;
+  background-color: #da6b64;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .header-inner__contact-sp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header-inner__contact-icon {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  width: 25px;
+  position: relative;
+  top: -5px;
+}
+
+.header .header-inner__contact-txt {
+  display: inline-block;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  font-size: 1.2rem;
+  color: #ffffff;
+  position: relative;
+  top: -6px;
+}
+
+.header .header-inner__contact-pc {
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header .header-inner {
+    padding: 2rem 1rem;
+  }
+  .header .header-inner__right {
+    width: 26rem;
+    height: 4.5rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 25px;
+    margin-right: 1rem;
+  }
+  .header .header-inner__contact-sp {
+    display: none;
+  }
+  .header .header-inner__contact-pc {
+    display: block;
+  }
+  .header .header-inner__left {
+    padding: 0;
+    margin-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header .header-inner__txt {
+    display: inline;
+    font-weight: 600;
+    position: relative;
+    top: 12px;
+    left: 6px;
+  }
+  .header .header-inner__logo {
+    width: 13rem;
+  }
 }
 
 /*==================================================
@@ -66,26 +194,98 @@ img {
 
 ** footer
 ==================================================*/
+.footer {
+  width: 100%;
+  height: 160px;
+  background-color: rgba(153, 153, 153, 0.3);
+}
+
+.footer .footer-inner {
+  width: 350px;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.footer .footer-txt {
+  text-align: center;
+  font-size: 8px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.footer .footer__span {
+  color: #6A9CC7;
+}
+
+.footer .fb-like {
+  margin: 1rem 0 0 8rem;
+}
+
+.footer .fb-like + * {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .footer-txt {
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
 /*==================================================
 
 ** pagetop
 ==================================================*/
+.pagetop {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(153, 153, 153, 0.4);
+  position: fixed;
+  bottom: 25px;
+  right: 15px;
+}
+
+.pagetop a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 3rem;
+  line-height: 1.6;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+
+@media (hover: hover) {
+  .pagetop a:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+}
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  .pagetop a:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+}
+
+@media (hover: none) {
+  .pagetop a:active {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+}
+
 /*==================================================
 
 ** main common
 ==================================================*/
 .main {
-  margin-top: 64px;
-  padding-top: 5rem;
+  margin-top: 30px;
 }
 
 .main p {
   font-size: 1.6rem;
   line-height: 1.8;
-}
-
-.main p + p {
-  margin-top: 1em;
 }
 
 .main .text-l {
@@ -95,8 +295,8 @@ img {
 }
 
 .main .text-s {
-  font-size: 1.4rem;
-  color: #999999;
+  font-size: 1.6rem;
+  color: #ffffff;
   line-height: 1.6;
 }
 
@@ -131,5 +331,25 @@ img {
   letter-spacing: 0.05em;
   line-height: 1.6;
   font-weight: 600;
+}
+
+/*==================================================
+
+** top-section
+==================================================*/
+.top-section {
+  width: 100%;
+  height: 500px;
+  background-image: url("../images/mainsp.jpg");
+  z-index: 0;
+}
+
+/*==================================================
+
+** iSara-discription
+==================================================*/
+.isara-discription {
+  width: 100%;
+  background-color: #ebb94d;
 }
 /*# sourceMappingURL=style.css.map */
