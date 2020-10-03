@@ -52,9 +52,10 @@ img {
 .header {
   width: 100%;
   height: $header-height;
+  background-color: #fff;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 10;
 
   .header-inner {
     display: flex;
@@ -340,7 +341,6 @@ img {
 ** main common
 ==================================================*/
 .main {
-  margin-top: 30px;
   p {
     font-size: 1.6rem;
     line-height: 1.8;
@@ -403,6 +403,7 @@ img {
   height: 500px;
   background-image: url('../images/mainsp.jpg');
   z-index: 0;
+  margin-top: 34px;
 }
 
 /*==================================================
@@ -412,7 +413,32 @@ img {
 
 .isara-discription {
   width: 100%;
+  height: auto;
   background-color: #ebb94d;
+}
+
+/*==================================================
+
+** question
+==================================================*/
+.question {
+  width: 100%;
+  height: auto;
+  background-image: url('../images/introbottom.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+/*==================================================
+
+** about
+==================================================*/
+
+.about {
+  width: 100%;
+  height: auto;
+  background-color: #fef5e0;
 }
 
 //////////////////////////////////////////////////
