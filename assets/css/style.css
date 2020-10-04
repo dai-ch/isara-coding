@@ -189,10 +189,6 @@ img {
 
 /*==================================================
 
-** gnav
-==================================================*/
-/*==================================================
-
 ** footer
 ==================================================*/
 .footer {
@@ -373,5 +369,153 @@ img {
   width: 100%;
   height: auto;
   background-color: #fef5e0;
+}
+
+/*==================================================
+
+** about-teaching
+==================================================*/
+.about-teaching {
+  background-image: url("../images/aboutsecondbgsp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*==================================================
+
+** about-teaching__container
+==================================================*/
+.about-teaching__container {
+  background-color: #016ea9;
+}
+
+/*==================================================
+
+** about-study
+==================================================*/
+.about-study {
+  width: 100%;
+  height: auto;
+}
+
+/*==================================================
+
+** isara-merit
+==================================================*/
+.isara-merit {
+  width: 100%;
+  height: auto;
+}
+
+/*==================================================
+
+** team-member
+==================================================*/
+.team-member {
+  width: 100%;
+  height: auto;
+  background-image: url("../images/teacherbgsp.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/*==================================================
+
+** question-ans
+==================================================*/
+.question-ans {
+  width: 100%;
+  height: auto;
+}
+
+.question-ans .circle {
+  background-color: #ebb94d;
+}
+
+.question-ans .title-wrap {
+  background-color: #ebb94d;
+}
+
+/*==================================================
+
+** isara-service
+==================================================*/
+.isara-service {
+  width: 100%;
+  height: auto;
+  background-image: url("../images/classbgsp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*==================================================
+
+** isara-contents
+==================================================*/
+.isara-contents {
+  width: 100%;
+  height: auto;
+}
+
+/*==================================================
+
+** about-bankok
+==================================================*/
+.about-bankok {
+  width: 100%;
+  height: auto;
+  background-image: url("../images/bangkokbgsp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*==================================================
+
+** isara-benefit
+==================================================*/
+.isara-benefit {
+  width: 100%;
+  height: auto;
+  background-color: #ebb94d;
+}
+
+/*==================================================
+
+** no-borantia
+==================================================*/
+.no-borantia {
+  width: 100%;
+  height: auto;
+  background-image: url("../images/specialdetailsp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*==================================================
+
+** founder-message
+==================================================*/
+.founder-message {
+  width: 100%;
+  height: auto;
+}
+
+/*==================================================
+
+** contact-form
+==================================================*/
+.contact-form {
+  width: 100%;
+  height: auto;
+  background-color: #ebb94d;
+}
+
+/*==================================================
+
+** other-question
+==================================================*/
+.other-question {
+  width: 100%;
+  height: auto;
 }
 /*# sourceMappingURL=style.css.map */
