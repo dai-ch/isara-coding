@@ -42,7 +42,7 @@ img {
 .wrap {
   //max-width: calc(1000px + 20px + 20px);
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 1.5rem;
 }
 
 /*==================================================
@@ -82,7 +82,7 @@ img {
     &__right {
       width: 6.5rem;
       height: 100%;
-      background-color: #da6b64;
+      background-color: $color-pink;
       display: flex;
       justify-content: center;
     }
@@ -114,20 +114,6 @@ img {
       display: none;
     }
   }
-
-  .menu-btn {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-    // width: $header-height-sp;
-    // height: $header-height-sp;
-    // position: absolute;
-    // top: 0;
-    // right: 0;
-    // cursor: pointer;
-    // background-color: rgba(#ff0000, 0.2);
-  }
 }
 
 @include media(min, sm) {
@@ -147,6 +133,7 @@ img {
     }
     .header-inner__contact-pc {
       display: block;
+      color: $color-white;
     }
 
     .header-inner__left {
@@ -170,7 +157,6 @@ img {
     }
   }
 }
-
 
 /*==================================================
 
@@ -257,14 +243,14 @@ img {
   }
 
   .text-l {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     text-align: center;
-    line-height: 1.8;
+    line-height: 1.6;
   }
 
   .text-s {
-    font-size: 1.6rem;
-    color: $color-white;
+    font-size: 1rem;
+    color: $color-black;
     line-height: 1.6;
   }
 
@@ -300,7 +286,29 @@ img {
     //color: $color-lightblue;
     letter-spacing: 0.05em;
     line-height: 1.6;
+    //font-weight: 600;
+  }
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .t-bold {
     font-weight: 600;
+  }
+
+  .text-span {
+    color: $color-yellow;
+  }
+
+  @include media(min, sm) {
+    .br {
+      display: none;
+    }
   }
 }
 
@@ -310,10 +318,68 @@ img {
 ==================================================*/
 .top-section {
   width: 100%;
-  height: 500px;
+  height: auto;
   background-image: url('../images/mainsp.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #777;
+  background-blend-mode: hard-light;
   z-index: 0;
-  margin-top: 34px;
+  margin: 84px auto 0;
+  padding: 5rem 0 8rem;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__item {
+      text-align: center;
+      width: 80%;
+      img {
+        width: 100%;
+      }
+
+      .section-title {
+        font-size: 1.7em;
+      }
+
+      .section-subtitle {
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+@include media(min, sm) {
+  .top-section {
+    height: 497px;
+
+    &__container {
+      // align-items: flex-end;
+      margin-top: 14rem;
+      &__item {
+        img {
+          margin-top: 3.2rem;
+          width: 30rem;
+        }
+
+        .section-title {
+          font-size: 2em;
+          line-height: 1.8;
+        }
+
+        .section-subtitle {
+          margin-top: 4rem;
+          font-weight: 700;
+        }
+      }
+    }
+  }
 }
 
 /*==================================================
@@ -324,7 +390,80 @@ img {
 .isara-discription {
   width: 100%;
   height: auto;
+  padding: 1.2rem 0;
   background-color: $color-yellow;
+  color: $color-white;
+  text-align: center;
+
+  .text {
+    margin-top: 2rem;
+  }
+  .text-red {
+    margin-top: 1.5rem;
+    display: inline-block;
+    line-height: 1;
+    color: $color-red;
+    background-color: $color-white;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  .isara-discription__contact__form {
+    width: 90%;
+    font-weight: 600;
+    background-color: $color-pink;
+    margin: 2.5rem auto 0;
+    padding: 2rem 0;
+    border-radius: 50px;
+    font-size: 1.7rem;
+  }
+  .fb-like {
+    margin-top: 2rem;
+  }
+}
+
+@include media(min, sm) {
+  .isara-discription {
+    width: 100%;
+    height: 62rem;
+    padding: 1.2rem 0;
+
+    .text {
+      margin-top: 3rem;
+      font-size: 2.2rem;
+      letter-spacing: 0.1em;
+      line-height: 1.4;
+      font-weight: 600;
+    }
+    .text-red {
+      margin-top: 1.5rem;
+      line-height: 1.4;
+      color: $color-red;
+      font-weight: 300;
+      font-size: 2rem;
+    }
+
+    .isara-discription__contact__form {
+      width: 80%;
+      font-weight: 600;
+      background-color: $color-pink;
+      margin: 3.5rem auto 0;
+      padding: 2.8rem 0;
+      border-radius: 50px;
+      font-size: 3rem;
+
+      & + p {
+        margin-top: 7rem;
+      }
+    }
+    .fb-like {
+      margin-top: 2rem;
+    }
+
+    .br {
+      display: none;
+    }
+  }
 }
 
 /*==================================================
@@ -335,9 +474,119 @@ img {
   width: 100%;
   height: auto;
   background-image: url('../images/introbottom.jpg');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
+  text-align: center;
+
+  .title-wrap {
+    margin-top: 3rem;
+    width: 100%;
+    &::before {
+      content: '';
+      display: block;
+      position: relative;
+      left: calc(0% - 0.5rem);
+      top: 2rem;
+      width: 3rem;
+      height: 3rem;
+      border-top: 4px solid $color-yellow;
+      border-left: 4px solid $color-yellow;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: relative;
+      bottom: 2rem;
+      left: calc(100% - 2.5rem);
+      width: 3rem;
+      height: 3rem;
+      border-bottom: 4px solid $color-yellow;
+      border-right: 4px solid $color-yellow;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 3;
+    }
+  }
+
+  .text {
+    line-height: 1.4;
+    margin-top: 2rem;
+  }
+
+  .question__text-span {
+    border-bottom: 5px solid $color-yellow;
+    // &:before{
+    //   content: '';
+    //   display: inline-block;
+    //   width: 40px;
+    //   height: 5px;
+    //   position: relative;
+    //   bottom: 0;
+    //   left:4%;
+    //   background-color:red;
+    // }
+  }
+
+  .text:last-child {
+    padding-bottom: 12rem;
+  }
+}
+
+@include media(min, sm) {
+  .question {
+    .title-wrap {
+      margin: 3rem auto 0;
+      width: 75%;
+      &::before {
+        content: '';
+        display: block;
+        position: relative;
+        left: 0;
+        top: 3rem;
+        width: 5.5rem;
+        height: 5.5rem;
+        border-top: 4px solid $color-yellow;
+        border-left: 4px solid $color-yellow;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        position: relative;
+        bottom: 3rem;
+        left: calc(100% - 5rem);
+        width: 5.5rem;
+        height: 5.5rem;
+        border-bottom: 4px solid $color-yellow;
+        border-right: 4px solid $color-yellow;
+      }
+
+      .section-title {
+        font-size: 2.3vw;
+        font-weight: 600;
+      }
+    }
+
+    .text {
+      line-height: 1.4;
+      margin-top: 2rem;
+      font-size: 2rem;
+    }
+
+    .question__text-span {
+      border-bottom: 8px solid $color-yellow;
+      font-weight: 600;
+    }
+
+    .text:last-child {
+      padding-bottom: 12rem;
+    }
+  }
 }
 
 /*==================================================
@@ -349,6 +598,162 @@ img {
   width: 100%;
   height: auto;
   background-color: #fef5e0;
+  text-align: center;
+  position: relative;
+  padding: 6rem 0;
+
+  .circle {
+    background-color: $color-yellow;
+    width: 6rem;
+    height: 6rem;
+    line-height: 3.75;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: $color-white;
+    position: absolute;
+    top: -3rem;
+    right: calc(50% - 3rem);
+  }
+
+  .title-wrap {
+    &::before {
+      content: '';
+      display: block;
+      position: relative;
+      left: calc(0% + 0.5rem);
+      top: 1rem;
+      width: 3rem;
+      height: 3rem;
+      border-top: 4px solid $color-yellow;
+      border-left: 4px solid $color-yellow;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: relative;
+      bottom: 1rem;
+      left: calc(100% - 3.5rem);
+      width: 3rem;
+      height: 3rem;
+      border-bottom: 4px solid $color-yellow;
+      border-right: 4px solid $color-yellow;
+    }
+
+    .section-title {
+      //font-size: 2rem;
+      font-weight: 600;
+      line-height: 2.2;
+    }
+  }
+}
+
+.about__container {
+  width: 85%;
+  height: auto;
+  margin: 3rem auto 0;
+  padding: 2rem;
+  background-color: $color-white;
+  border: 3px solid $color-yellow;
+  border-radius: 3px;
+
+  .about__container__title {
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+
+  .about__container__list {
+    width: 80%;
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+.about__container__item {
+  width: 32%;
+  height: auto;
+  margin-top: 1rem;
+
+  .about__container__img {
+    width: 25px;
+    height: 25px;
+    margin: 0 auto;
+
+    & + * {
+      margin-top: 1rem;
+    }
+  }
+}
+
+@include media(min, sm) {
+  .about {
+    .text-l {
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+
+    .section-title {
+      font-size: 2.5vw;
+      font-weight: 600;
+      line-height: 2.2;
+    }
+
+    .circle {
+      width: 8rem;
+      height: 8rem;
+      line-height: 5;
+      top: -4rem;
+      right: calc(50% - 4rem);
+    }
+
+    .title-wrap {
+      &::before {
+        content: '';
+        left: calc(15% + 0.5rem);
+        top: 1rem;
+        width: 5rem;
+        height: 5rem;
+      }
+
+      &::after {
+        bottom: 1rem;
+        left: calc(85% - 5.5rem);
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+
+    .about__container__list {
+      width: 100%;
+      max-width: 80rem;
+    }
+  }
+
+  .about__container {
+    width: 85%;
+    height: auto;
+    padding: 4rem 0 6rem;
+    border-radius: 5px;
+  }
+
+  .about__container__item {
+    width: calc(100% / 5);
+    max-width: 15rem;
+
+    .about__container__img {
+      width: 50px;
+      height: 50px;
+
+      & + * {
+        margin-top: 2rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
 }
 
 /*==================================================
@@ -359,6 +764,122 @@ img {
   background-image: url('../images/aboutsecondbgsp.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  color: $color-white;
+  text-align: center;
+  padding: 5rem ;
+
+  .section-title {
+    padding-top: 1rem;
+
+    & + p {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+
+  h3.text {
+    margin-top: 2rem;
+  }
+
+  .about-teaching__list {
+    width: 90%;
+    height: auto;
+    margin: 1rem auto 0;
+    display: flex;
+    flex-direction: column;
+    //border: 3px solid red;
+  }
+
+  .about-teaching__item {
+    //border: 3px solid red;
+    width: 100%;
+    height: auto;
+    margin: 0.75rem auto;
+    padding: 2rem 0 3rem;
+    border-radius: 5px;
+    background-color: $color-white;
+    color: $color-black;
+
+    .about-teaching__item__step {
+      text-transform: uppercase;
+      width: 80%;
+      margin: auto;
+      background-color: $color-yellow;
+      line-height: 1.3;
+      border-radius: 5px;
+      color: $color-white;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .text {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      line-height: 1;
+    }
+  }
+}
+
+@include media(min, sm) {
+  .about-teaching {
+    padding: 5rem 0;
+
+    .section-title {
+      padding-top: 3rem;
+      font-size: 3rem;
+
+      & + p {
+        margin-top: 3rem;
+        font-size: 2rem;
+      }
+    }
+
+    h3.text {
+      font-size: 2rem;
+    }
+
+    .about-teaching__list {
+      width: 100%;
+      max-width: 100rem;
+      height: auto;
+      margin: 4rem auto 0;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .about-teaching__item {
+      //border: 3px solid red;
+      width: calc(100% / 3);
+      margin: 0.75rem 2rem 0 0;
+      padding: 3rem 0 8rem;
+
+      .about-teaching__item__step {
+        line-height: 1.3;
+        border-radius: 5px;
+        font-size: 2rem;
+      }
+
+      .text {
+        font-size: 1.4rem;
+        font-weight: 300;
+        margin-top: 2rem;
+        line-height: 1;
+      }
+
+      .text:last-child{
+        font-weight: 600;
+        font-size: 1.6rem;
+      }
+    }
+
+    .about-teaching__item:last-child {
+      margin-right: 0;
+    }
+
+
+  }
 }
 
 /*==================================================
@@ -370,6 +891,9 @@ img {
   background-color: #016ea9;
 }
 
+@include media(min, sm) {
+}
+
 /*==================================================
 
 ** about-study
@@ -379,6 +903,9 @@ img {
   height: auto;
 }
 
+@include media(min, sm) {
+}
+
 /*==================================================
 
 ** isara-merit
@@ -386,6 +913,9 @@ img {
 .isara-merit {
   width: 100%;
   height: auto;
+}
+
+@include media(min, sm) {
 }
 
 /*==================================================
@@ -398,6 +928,9 @@ img {
   background-image: url('../images/teacherbgsp.jpg');
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+@include media(min, sm) {
 }
 
 /*==================================================
@@ -416,6 +949,9 @@ img {
   }
 }
 
+@include media(min, sm) {
+}
+
 /*==================================================
 
 ** isara-service
@@ -428,6 +964,9 @@ img {
   background-size: cover;
 }
 
+@include media(min, sm) {
+}
+
 /*==================================================
 
 ** isara-contents
@@ -435,6 +974,9 @@ img {
 .isara-contents {
   width: 100%;
   height: auto;
+}
+
+@include media(min, sm) {
 }
 
 /*==================================================
@@ -449,6 +991,9 @@ img {
   background-size: cover;
 }
 
+@include media(min, sm) {
+}
+
 /*==================================================
 
 ** isara-benefit
@@ -458,6 +1003,9 @@ img {
   width: 100%;
   height: auto;
   background-color: $color-yellow;
+}
+
+@include media(min, sm) {
 }
 
 /*==================================================
@@ -473,6 +1021,9 @@ img {
   background-size: cover;
 }
 
+@include media(min, sm) {
+}
+
 /*==================================================
 
 ** founder-message
@@ -480,6 +1031,9 @@ img {
 .founder-message {
   width: 100%;
   height: auto;
+}
+
+@include media(min, sm) {
 }
 
 /*==================================================
@@ -492,6 +1046,9 @@ img {
   background-color: $color-yellow;
 }
 
+@include media(min, sm) {
+}
+
 /*==================================================
 
 ** other-question
@@ -499,6 +1056,9 @@ img {
 .other-question {
   width: 100%;
   height: auto;
+}
+
+@include media(min, sm) {
 }
 
 //////////////////////////////////////////////////
