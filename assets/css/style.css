@@ -1127,6 +1127,7 @@ img {
   }
   .isara-merit .isara-merit__container {
     width: 99%;
+    max-width: 100rem;
     margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
